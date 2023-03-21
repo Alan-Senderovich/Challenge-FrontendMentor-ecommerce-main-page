@@ -11,7 +11,7 @@ const MainHeader = () => {
     "hidden font-bold md:static md:mr-auto md:flex md:flex-row md:h-auto md:gap-4 md:gap-y-0 md:p-0";
 
   const navClassesWithMenu =
-    "absolute top-0 left-0 flex h-full w-4/5 flex-col gap-y-5 bg-white p-8 font-bold md:static md:mr-auto md:flex md:flex-row md:gap-4 md:gap-y-0 md:p-0";
+    "z-10 absolute top-0 left-0 flex h-full w-4/5 flex-col gap-y-5 bg-white p-8 font-bold md:static md:mr-auto md:flex md:flex-row md:gap-4 md:gap-y-0 md:p-0";
 
   const [navClass, setNavClass] = useState(navClassesWithoutMenu);
 
