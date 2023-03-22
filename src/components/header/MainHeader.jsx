@@ -8,7 +8,7 @@ import NavItem from "@/components/header/NavItem";
 
 const MainHeader = () => {
   const navClassesWithoutMenu =
-    "hidden font-bold md:static md:mr-auto md:flex md:flex-row md:h-auto md:gap-4 md:gap-y-0 md:p-0";
+    "hidden font-bold md:static md:mr-auto md:flex md:flex-row md:h-auto md:gap-8 md:gap-y-0 md:p-0";
 
   const navClassesWithMenu =
     "z-10 absolute top-0 left-0 flex h-full w-4/5 flex-col gap-y-5 bg-white p-8 font-bold md:static md:mr-auto md:flex md:flex-row md:gap-4 md:gap-y-0 md:p-0";
@@ -25,7 +25,7 @@ const MainHeader = () => {
 
   return (
     <>
-      <header className="container mx-auto flex items-center gap-8 p-4 py-4 md:p-0 md:py-0">
+      <header className="container mx-auto flex items-center gap-8 md:gap-16 p-4 py-4 md:p-0 md:py-0">
         <button className="md:hidden" onClick={handleOpenMenu}>
           <MenuIcon />
         </button>

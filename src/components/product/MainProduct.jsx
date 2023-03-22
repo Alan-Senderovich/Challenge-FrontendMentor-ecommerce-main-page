@@ -1,5 +1,5 @@
-import DetailProduct from "@/components/product/col-details/DetailProduct";
-import MainImages from "@/components/product/col-images/MainImages";
+import DetailProduct from "@/components/product/details/DetailProduct";
+import MainImages from "@/components/product/gallery/MainImages";
 
 import imageProduct1 from "@/assets/images/image-product-1.jpg";
 import imageProduct2 from "@/assets/images/image-product-2.jpg";
@@ -17,7 +17,7 @@ const ARRAY_IMGS_SMALL = [imageProduct1Thumbnail, imageProduct2Thumbnail, imageP
 
 const MainProduct = () => {
   return (
-    <main className="grid grid-cols-1 md:container md:mx-auto md:min-h-[calc(100vh-88px-1px)] md:grid-cols-2 md:items-center md:gap-20">
+    <main className="grid grid-cols-1 md:container md:mx-auto md:min-h-[calc(100vh-88px-1px)] md:grid-cols-2 md:items-center md:gap-20 lg:gap-1">
       <MainImages ARRAY_IMGS={ARRAY_IMGS} ARRAY_IMGS_SMALL={ARRAY_IMGS_SMALL}/>
       <DetailProduct />
     </main>

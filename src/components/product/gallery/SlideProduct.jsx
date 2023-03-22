@@ -2,18 +2,7 @@ import React, { useCallback, useEffect, useRef, useState } from "react";
 
 import PrevIcon from "@/components/icons/PrevIcon";
 import NextIcon from "@/components/icons/NextIcon";
-
-import imageProduct1 from "@/assets/images/image-product-1.jpg";
-import imageProduct2 from "@/assets/images/image-product-2.jpg";
-import imageProduct3 from "@/assets/images/image-product-3.jpg";
-import imageProduct4 from "@/assets/images/image-product-4.jpg";
-
-import imageProduct1Thumbnail from "@/assets/images/image-product-1-thumbnail.jpg";
-import imageProduct2Thumbnail from "@/assets/images/image-product-2-thumbnail.jpg";
-import imageProduct3Thumbnail from "@/assets/images/image-product-3-thumbnail.jpg";
-import imageProduct4Thumbnail from "@/assets/images/image-product-4-thumbnail.jpg";
-
-const ARRAY_IMGS = [imageProduct1, imageProduct2, imageProduct3, imageProduct4];
+import CloseIcon from "../../icons/CloseIcon";
 //
 
 const SlideProduct = ({
@@ -64,8 +53,11 @@ const SlideProduct = ({
   return (
     <section {...props}>
       {isOpenModal && (
-        <button className="text-right md:col-span-4" onClick={handleCloseModal}>
-          cerrar
+        <button
+          className="ml-auto text-white hover:text-orange-500 md:col-span-4"
+          onClick={handleCloseModal}
+        >
+          <CloseIcon className="h-4 w-4 fill-current" />
         </button>
       )}
       <div className="relative col-span-4">
@@ -77,9 +69,9 @@ const SlideProduct = ({
         />
         <div
           ref={btnSlider}
-          className={`absolute top-1/2 left-0 flex w-full -translate-y-1/2 justify-between px-4 ${
+          className={`absolute top-1/2 left-0 flex w-full -translate-y-1/2 justify-between ${
             !isOpenModal && "md:hidden"
-          }`}
+          } ${isOpenModal && "-left-[5%] w-[110%]"}`}
         >
           <button
             onClick={handleClickPrev}
@@ -108,7 +100,12 @@ const SlideProduct = ({
             alt="imageProductThumbnail"
             className="md:rounded-md"
           />
-          <span className={`absolute top-0 left-0 h-full w-full rounded-md cursor-pointer bg-transparent hover:bg-[rgba(255,255,255,0.5)] ${currentIndex === i && "bg-[rgba(255,255,255,0.5)] border-2 border-orange-primary"}`}></span>
+          <span
+            className={`absolute top-0 left-0 h-full w-full cursor-pointer rounded-md bg-transparent hover:bg-[rgba(255,255,255,0.5)] ${
+              currentIndex === i &&
+              "border-2 border-orange-primary bg-[rgba(255,255,255,0.5)]"
+            }`}
+          ></span>
         </div>
       ))}
     </section>
