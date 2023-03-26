@@ -28,7 +28,7 @@ const MainHeader = () => {
 
     return (
         <>
-            <header className="container relative mx-auto flex items-center gap-8 p-4 py-4 lg:container md:gap-16 md:p-0 md:py-0 lg:w-[90%] xl:w-[85%]">
+            <header className={`container ${isOpenMenu ? "static" : "relative"} mx-auto flex items-center gap-8 p-4 py-4 lg:container md:gap-16 md:p-0 md:py-0 lg:w-[90%] xl:w-[85%]`}>
                 <button className="md:hidden" onClick={handleOpenMenu}>
                     <MenuIcon />
                 </button>
@@ -40,7 +40,7 @@ const MainHeader = () => {
                 <nav
                     className={`font-bold md:static md:mr-auto md:flex md:flex-row ${
                         isOpenMenu
-                            ? "absolute top-0 left-0 z-10 flex h-full w-4/5 flex-col gap-y-5 bg-white p-8 md:gap-4 md:gap-y-0 md:p-0"
+                            ? "absolute top-0 left-0 z-50 flex h-full w-4/5 flex-col gap-y-5 bg-white p-8 md:gap-4 md:gap-y-0 md:p-0"
                             : "hidden md:h-auto md:gap-8 md:gap-y-0 md:p-0"
                     }`}
                 >
